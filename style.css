@@ -1,0 +1,844 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+    background-color: #f5f5f5;
+    color: #222;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background-color: #222;
+    color: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+nav h2 {
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #bbb;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 90px 8%;
+}
+
+section h2 {
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-size: 32px;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+.home h2 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.home p {
+    max-width: 650px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+#welcomeButton,
+#projectButton,
+#aboutButton {
+
+    padding: 12px 22px;
+
+    background-color: #222;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    margin: 5px;
+
+    transition: 0.3s;
+}
+
+#welcomeButton:hover,
+#projectButton:hover,
+#aboutButton:hover {
+
+    transform: translateY(-2px);
+
+    background-color: #444;
+}
+
+#welcomeMessage {
+
+    margin-top: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    background-color: white;
+
+    text-align: center;
+}
+
+#about p {
+
+    max-width: 700px;
+
+    margin: 0 auto 20px;
+}
+
+#moreAbout {
+    display: none;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+#education {
+    background-color: #f5f5f5;
+}
+
+.education-card {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.education-card:hover {
+
+    transform: translateY(-5px);
+}
+
+.education-card h3 {
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+#skills {
+    background-color: white;
+}
+
+.skills-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.skill-card {
+
+    padding: 15px 25px;
+
+    background-color: #f5f5f5;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+#projects {
+    background-color: white;
+}
+
+
+/* Filter buttons */
+
+.filter-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+
+    padding: 10px 20px;
+
+    background-color: white;
+
+    color: #222;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+
+    background-color: #eee;
+
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+
+    background-color: #222;
+
+    color: white;
+}
+
+
+/* Project container */
+
+.project-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* Project card */
+
+.project-card {
+
+    background-color: #f5f5f5;
+
+    padding: 30px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.10);
+}
+
+.project-card h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+}
+
+.project-card p {
+
+    margin-bottom: 15px;
+}
+
+.technologies {
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* Project button */
+
+.project-button {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    background-color: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.project-button:hover {
+
+    background-color: #444;
+
+    transform: translateY(-2px);
+}
+
+
+/* Hide filtered projects */
+
+.project-card.hide {
+    display: none;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+
+    background-color: #f5f5f5;
+}
+
+.contact-intro {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.contact-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.contact-info {
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h3 {
+
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+
+    color: #222;
+
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
+}
+
+.contact-form label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    outline: none;
+
+    border-color: #222;
+}
+
+.contact-form textarea {
+
+    resize: vertical;
+}
+
+.contact-form button {
+
+    padding: 12px 20px;
+
+    background-color: #222;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+
+    background-color: #444;
+
+    transform: translateY(-2px);
+}
+
+#formMessage {
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background-color: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer p {
+
+    margin: 5px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+
+    background-color: #121212;
+
+    color: #f5f5f5;
+}
+
+body.dark-mode nav {
+
+    background-color: #000;
+}
+
+body.dark-mode #about,
+body.dark-mode #skills,
+body.dark-mode #projects {
+
+    background-color: #1e1e1e;
+}
+
+body.dark-mode #education,
+body.dark-mode #contact {
+
+    background-color: #121212;
+}
+
+body.dark-mode .education-card,
+body.dark-mode .project-card,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form {
+
+    background-color: #242424;
+
+    border-color: #444;
+}
+
+body.dark-mode .skill-card {
+
+    background-color: #242424;
+
+    border-color: #444;
+}
+
+body.dark-mode .filter-btn {
+
+    background-color: #242424;
+
+    color: white;
+
+    border-color: #555;
+}
+
+body.dark-mode .filter-btn:hover {
+
+    background-color: #333;
+}
+
+body.dark-mode .contact-info a {
+
+    color: white;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+
+    background-color: #333;
+
+    color: white;
+
+    border-color: #555;
+}
+
+
+/* =========================
+   DARK MODE BUTTON
+========================= */
+
+#themeButton {
+
+    padding: 8px 14px;
+
+    background-color: white;
+
+    color: #222;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+#themeButton:hover {
+
+    background-color: #ddd;
+}
+
+body.dark-mode #themeButton {
+
+    background-color: #333;
+
+    color: white;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-button {
+
+    display: none;
+
+    background: none;
+
+    color: white;
+
+    border: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+
+        padding: 15px 6%;
+    }
+
+
+    .menu-button {
+
+        display: block;
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+        padding-top: 20px;
+    }
+
+
+    .nav-links.show {
+
+        display: flex;
+    }
+
+
+    .home h1 {
+
+        font-size: 34px;
+    }
+
+
+    .home h2 {
+
+        font-size: 20px;
+    }
+
+
+    section {
+
+        padding: 70px 6%;
+    }
+
+
+    section h2 {
+
+        font-size: 28px;
+    }
+
+
+    .project-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-card {
+
+        padding: 25px;
+    }
+
+
+    .contact-info,
+    .contact-form {
+
+        padding: 25px;
+    }
+
+}

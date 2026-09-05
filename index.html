@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mahesh | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav>
+
+        <h2>Mahesh</h2>
+
+        <!-- Hamburger Button -->
+        <button id="menuButton" class="menu-button">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+            <button id="themeButton">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section id="home" class="home">
+
+        <h1>Hi, I'm Mahesh</h1>
+
+        <h2>Computer Science Engineering Student</h2>
+
+        <p>
+            I am interested in Java, Data Structures and Algorithms,
+            problem solving and web development.
+        </p>
+
+        <button id="welcomeButton">
+            Click Me
+        </button>
+
+        <p id="welcomeMessage"></p>
+
+        <button id="projectButton">
+            Show Projects
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a Computer Science Engineering student interested
+            in programming, software development and problem solving.
+        </p>
+
+        <p id="moreAbout">
+
+            I am currently developing my skills in Java,
+            Data Structures and Algorithms, web development
+            and problem solving.
+
+        </p>
+
+        <button id="aboutButton">
+            Show More
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-card">
+
+            <h3>
+                B.Tech - Computer Science and Engineering
+            </h3>
+
+            <p>
+                VIT-AP University
+            </p>
+
+            <p>
+                Currently pursuing my undergraduate degree.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">Java</div>
+            <div class="skill-card">DSA</div>
+            <div class="skill-card">Problem Solving</div>
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Git & GitHub</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="filter-buttons">
+
+            <button class="filter-btn active"
+                    data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="java">
+                Java
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="web">
+                Web
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="dsa">
+                DSA
+            </button>
+
+        </div>
+
+
+        <div class="project-container">
+
+
+            <!-- Project 1 -->
+
+            <div class="project-card"
+                 data-category="java dsa">
+
+                <h3>DSA Problem Manager</h3>
+
+                <p>
+                    A Java-based application for managing and tracking
+                    Data Structures and Algorithms problems.
+                </p>
+
+                <p class="technologies">
+                    Java | File Handling | DSA
+                </p>
+
+                <a href="#"
+                   class="project-button">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="project-card"
+                 data-category="web">
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    A personal portfolio website created to showcase
+                    my skills, projects and achievements.
+                </p>
+
+                <p class="technologies">
+                    HTML | CSS | JavaScript
+                </p>
+
+                <a href="#"
+                   class="project-button">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <!-- Project 3 -->
+
+            <div class="project-card"
+                 data-category="java">
+
+                <h3>Scientific Calculator</h3>
+
+                <p>
+                    A Java-based scientific calculator that performs
+                    arithmetic, trigonometric, logarithmic and other
+                    mathematical operations.
+                </p>
+
+                <p class="technologies">
+                    Java | OOP | Mathematical Functions
+                </p>
+
+                <a href="#"
+                   class="project-button">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p class="contact-intro">
+            Feel free to reach out to me for opportunities,
+            collaborations or any queries.
+        </p>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-info">
+
+                <h3>Get In Touch</h3>
+
+                <p>
+                    📧 Email:
+                    <a href="mailto:your-email@gmail.com">
+                        your-email@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    💻 GitHub:
+                    <a href="#" target="_blank">
+                        My GitHub
+                    </a>
+                </p>
+
+                <p>
+                    🔗 LinkedIn:
+                    <a href="#" target="_blank">
+                        My LinkedIn
+                    </a>
+                </p>
+
+            </div>
+
+
+            <form class="contact-form"
+                  id="contactForm">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Enter your message"
+                ></textarea>
+
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Mahesh. All Rights Reserved.
+        </p>
+
+        <p>
+            Built with HTML, CSS and JavaScript.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
