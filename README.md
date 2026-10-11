@@ -13,6 +13,8 @@ my skills, projects, education and contact information.
 
 ## Features
 
+- Animated particle background & ambient gradient lighting
+- Reduced-motion accessibility compliance
 - Responsive design
 - Dark mode
 - Mobile navigation menu
